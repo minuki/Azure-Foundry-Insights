@@ -1,25 +1,25 @@
-# Azure OpenAI Insights
-The 'Azure OpenAI Insights' workbook offers deep insights into Azure OpenAI usage, helping you manage costs, optimize performance, and make strategic decisions for a robust AI infrastructure.
+# Microsoft Foundry Insights
+The 'Microsoft Foundry Insights' workbook offers deep insights into Azure OpenAI model usage running on Microsoft Foundry resources, helping you manage costs, optimize performance, and make strategic decisions for a robust AI infrastructure.
 
 ![image](https://github.com/dolevshor/Azure-OpenAI-Insights/assets/69309933/d3ed1aaa-5c10-40fb-89b7-d40b487d69a3)
 
 
 ## Introduction
 
-In the ever-evolving world of Artificial Intelligence, organizations and entities across various sectors are on a quest to leverage advanced technologies efficiently. Azure OpenAI opens a realm of possibilities, offering both challenges and excitement, particularly for those at the early stages of AI adoption.
+In the ever-evolving world of Artificial Intelligence, organizations and entities across various sectors are on a quest to leverage advanced technologies efficiently. Microsoft Foundry opens a realm of possibilities for deploying and operating Azure OpenAI models, offering both challenges and excitement, particularly for those at the early stages of AI adoption.
 
 Read more in depth in this Tech Community blog: [Azure OpenAI Insights: Monitoring AI with Confidence](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-openai-insights-monitoring-ai-with-confidence/ba-p/4026850)
 
-This workbook offers deep insights into Azure OpenAI resources and usage (Platform Metrics and Logs) and can be powerful tool in analyzing & monitoring your AI initiatives.
+This workbook offers deep insights into Microsoft Foundry resources hosting Azure OpenAI models and their usage (Platform Metrics and Logs) and can be a powerful tool in analyzing & monitoring your AI initiatives.
 
 ## Structure and Views 
 
 ### Structure
 
 This workbook contains 3 main parts:
-- **Overview** - Holistic view of Azure OpenAI resources
-- **Monitor** - Holistic view of Azure OpenAI resources Metrics
-- **Insights** - Holistic view of Azure OpenAI resources Logs
+- **Overview** - Holistic view of Microsoft Foundry resources (Azure OpenAI models)
+- **Monitor** - Holistic view of Microsoft Foundry resources Metrics
+- **Insights** - Holistic view of Microsoft Foundry resources Logs
   - Requires by enabling Diagnostic Settings to Log Analytics Workspace.
 
 ### Views
@@ -27,14 +27,14 @@ This workbook contains 3 main parts:
 Types of views this workbook provides:
 
 - **Overview**
-  - Azure OpenAI Resources by
+  - Microsoft Foundry Resources by
     - SubscriptionId
     - Resource Group
     - Location
     - Kind
     - Public Network Access
     - Private Network Access
-  - All Azure OpenAI Resources
+  - All Microsoft Foundry Resources (resources of kind `OpenAI` and `AIServices` hosting Azure OpenAI models)
 
 > The information displayed uses [KQL](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/) queries to query the [Azure Resource Graph](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview).
 
@@ -90,7 +90,7 @@ Types of views this workbook provides:
       - by Model Name
       - by Model Deployment Name
 
-> The information displayed uses Azure OpenAI Platform Metrics and presented by multiple dimensions.
+> The information displayed uses Azure OpenAI Platform Metrics, emitted by Microsoft Foundry resources, and presented by multiple dimensions.
 
 - **Insights**
   - Overview
@@ -174,8 +174,8 @@ Follow this steps to use the Workbook:
 <img src="https://user-images.githubusercontent.com/69309933/172807673-dfc63741-0c40-47c0-ab58-d39309b06e69.png" width="700"> 
 
 - Select the _'Gallery Template'_ (step 1)
-- Replace the JSON code with this JSON code [Azure OpenAI Insights JSON](https://raw.githubusercontent.com/dolevshor/Azure-OpenAI-Insights/main/Workbook/Azure%20OpenAI%20Insights.workbook) (step 2)
-  - We use the _Gallery Templaty type_ (step 1), so we need to use the _'Azure OpenAI Insights.workbook'_ and not the _'Azure OpenAI Insights.json'_.
+- Replace the JSON code with this JSON code [Microsoft Foundry Insights JSON](https://raw.githubusercontent.com/minuki/Azure-Foundry-Insights/main/Workbook/Azure%20OpenAI%20Insights.workbook) (step 2)
+  - We use the _Gallery Template type_ (step 1), so we need to use the _'Azure OpenAI Insights.workbook'_ and not the _'Azure OpenAI Insights.json'_.
 - Click _'Apply'_ (step 3)
 
 <img src="https://user-images.githubusercontent.com/69309933/172807762-17aec6f9-4a81-4d5b-9017-673a0ab6b26e.png" width="700"> 
@@ -185,7 +185,7 @@ Follow this steps to use the Workbook:
 ![image](https://github.com/dolevshor/Azure-OpenAI-Insights/assets/69309933/1aa875d8-0303-49a1-8a0d-74e83949e386)
 
 - Select a name and where to save the Workbook:
-  - Title: _'Azure OpenAI Insights'_
+  - Title: _'Microsoft Foundry Insights'_
   - Subscription: <_Subscription Name_>
   - Resource group: <_Resource Group Name_>
   - Location: <_Region_>
@@ -193,8 +193,9 @@ Follow this steps to use the Workbook:
   
 The Workbook is ready to use!
 - Click on _'Workbooks'_
-- Click on _'Azure OpenAI Insights'_ Workbook.
+- Click on _'Microsoft Foundry Insights'_ Workbook.
 
-Start using the Workbook and analyze your Azure OpenAI resources.<br/>
+Start using the Workbook and analyze your Microsoft Foundry resources running Azure OpenAI models.<br/>
 
 > (Optional) You can filter by specific subscription/s or resource/s.
+> Note: Resources of kind `OpenAI` (dedicated Azure OpenAI resource) and `AIServices` (Microsoft Foundry resource) are both included.

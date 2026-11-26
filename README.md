@@ -1,7 +1,9 @@
 # Microsoft Foundry Insights
 The 'Microsoft Foundry Insights' workbook offers deep insights into Azure OpenAI model usage running on Microsoft Foundry resources, helping you manage costs, optimize performance, and make strategic decisions for a robust AI infrastructure.
 
-![image](https://github.com/dolevshor/Azure-OpenAI-Insights/assets/69309933/d3ed1aaa-5c10-40fb-89b7-d40b487d69a3)
+![Microsoft Foundry Insights Overview](screenshots/01-overview.png)
+
+> Screenshot captured from a live Azure Portal deployment of this workbook. Subscription ID and resource group/resource names have been redacted.
 
 
 ## Introduction
@@ -92,6 +94,10 @@ Types of views this workbook provides:
 
 > The information displayed uses Azure OpenAI Platform Metrics, emitted by Microsoft Foundry resources, and presented by multiple dimensions.
 
+![Monitor tab](screenshots/02-monitor.png)
+
+> Resource names in the legend have been redacted.
+
 - **Insights**
   - Overview
     - Requests
@@ -126,7 +132,9 @@ Types of views this workbook provides:
 
 #### Filters
 
-![image](https://github.com/dolevshor/Azure-OpenAI-Insights/assets/69309933/88233144-bc7f-4ced-bdc8-a6fdc5b73ea8)
+![Insights tab with filters and logs](screenshots/03-insights.png)
+
+> Resource name in the legend and the account banner have been redacted.
 
 
 This workbook support to filter all the logs by several fields:
@@ -157,32 +165,24 @@ Importing this Workbook to your Azure environment is quite simple.
 Follow this steps to use the Workbook:
 
 - Login to [Azure Portal](https://portal.azure.com/) <img src="https://user-images.githubusercontent.com/69309933/172941966-9e030031-6ccb-4ebf-bd2b-04bb623e5ff7.png" width="20" height="20">
-- Go to _'Azure Workbooks'_
+- Go to _'Azure Workbooks'_, then click _'+ Create'_ and _'New workbook'_
 
-<img src="https://user-images.githubusercontent.com/69309933/172806635-14051976-328e-4623-96ab-0dd6a7bc7817.png" width="350">
+![Azure Workbooks gallery](screenshots/howto-01-gallery.png)
+![New workbook menu](screenshots/howto-02-new-menu.png)
 
-- Click on _'+ Create'_
+- Open the Advanced Editor (the _'{}'_ button on the toolbar)
 
-<img src="https://user-images.githubusercontent.com/69309933/172807465-cced3466-0669-423b-87b3-8fa70fdbf1d1.png" width="350">
+![Advanced Editor](screenshots/howto-03-advanced-editor.png)
 
-- Click on _'+ New'_
+- Click _'Import'_ and select the downloaded [Microsoft Foundry Insights JSON](https://raw.githubusercontent.com/minuki/Azure-Foundry-Insights/main/Workbook/Azure%20OpenAI%20Insights.workbook) file (or paste its contents directly)
+  - We use the _Gallery Template type_, so we need to use the _'Azure OpenAI Insights.workbook'_ and not the _'Azure OpenAI Insights.json'_.
+- Click _'Apply'_
 
-<img src="https://user-images.githubusercontent.com/69309933/172807547-52d790ce-7852-4b4b-a81f-81e8b7fac26e.png" width="350"> 
+![JSON imported into Advanced Editor](screenshots/howto-04-json-pasted.png)
 
-- Open the Advanced Editor using the _'</>'_ button on the toolbar
+- Click the _'Save'_ button on the toolbar
 
-<img src="https://user-images.githubusercontent.com/69309933/172807673-dfc63741-0c40-47c0-ab58-d39309b06e69.png" width="700"> 
-
-- Select the _'Gallery Template'_ (step 1)
-- Replace the JSON code with this JSON code [Microsoft Foundry Insights JSON](https://raw.githubusercontent.com/minuki/Azure-Foundry-Insights/main/Workbook/Azure%20OpenAI%20Insights.workbook) (step 2)
-  - We use the _Gallery Template type_ (step 1), so we need to use the _'Azure OpenAI Insights.workbook'_ and not the _'Azure OpenAI Insights.json'_.
-- Click _'Apply'_ (step 3)
-
-<img src="https://user-images.githubusercontent.com/69309933/172807762-17aec6f9-4a81-4d5b-9017-673a0ab6b26e.png" width="700"> 
-
-- Click in the ‘Save’ button on the toolbar
-
-![image](https://github.com/dolevshor/Azure-OpenAI-Insights/assets/69309933/1aa875d8-0303-49a1-8a0d-74e83949e386)
+![Save panel](screenshots/howto-05-save-dialog.png)
 
 - Select a name and where to save the Workbook:
   - Title: _'Microsoft Foundry Insights'_
@@ -199,3 +199,4 @@ Start using the Workbook and analyze your Microsoft Foundry resources running Az
 
 > (Optional) You can filter by specific subscription/s or resource/s.
 > Note: Resources of kind `OpenAI` (dedicated Azure OpenAI resource) and `AIServices` (Microsoft Foundry resource) are both included.
+

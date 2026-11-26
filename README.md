@@ -165,22 +165,26 @@ Importing this Workbook to your Azure environment is quite simple.
 Follow this steps to use the Workbook:
 
 - Login to [Azure Portal](https://portal.azure.com/) <img src="https://user-images.githubusercontent.com/69309933/172941966-9e030031-6ccb-4ebf-bd2b-04bb623e5ff7.png" width="20" height="20">
-- Go to _'Azure Workbooks'_, then click _'+ Create'_ and _'New workbook'_
+- Go to _'Azure Workbooks'_, which opens the template gallery below
+- Click _'+ New'_
 
 ![Azure Workbooks gallery](screenshots/howto-01-gallery.png)
+
+- From the dropdown, select _'New workbook'_
+
 ![New workbook menu](screenshots/howto-02-new-menu.png)
 
-- Open the Advanced Editor (the _'{}'_ button on the toolbar)
+- On the new, empty workbook, click _'Advanced Editor'_ (the code icon) on the toolbar
 
 ![Advanced Editor](screenshots/howto-03-advanced-editor.png)
 
 - Click _'Import'_ and select the downloaded [Microsoft Foundry Insights JSON](https://raw.githubusercontent.com/minuki/Azure-Foundry-Insights/main/Workbook/Azure%20OpenAI%20Insights.workbook) file (or paste its contents directly)
   - We use the _Gallery Template type_, so we need to use the _'Azure OpenAI Insights.workbook'_ and not the _'Azure OpenAI Insights.json'_.
-- Click _'Apply'_
+- The editor is now populated with the workbook definition — click _'Apply'_
 
 ![JSON imported into Advanced Editor](screenshots/howto-04-json-pasted.png)
 
-- Click the _'Save'_ button on the toolbar
+- Back in the rendered workbook, click _'Save'_ on the toolbar
 
 ![Save panel](screenshots/howto-05-save-dialog.png)
 
